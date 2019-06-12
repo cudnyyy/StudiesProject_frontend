@@ -1,0 +1,82 @@
+#container {
+    position: relative;
+    top: 50px;
+    min-height: 900px;
+    max-height: 100%;
+    min-width: 1200px;
+}
+
+#title {
+    color: rgb(197, 126, 34);
+    font-size: 18px;
+    text-align: center;
+}
+
+#addtodb {
+    background-color: rgba(128, 128, 128, 0.300);
+    position: relative;
+    text-align: center;
+    border: solid rgb(48, 47, 47) 5px;
+}
+#deletefromdb {
+    background-color: rgba(255, 192, 203, 0.300);
+    position: relative;
+    text-align: center;
+    border: solid rgb(48, 47, 47) 5px;
+}
+#showdb {
+    background-color: rgba(192, 193, 255, 0.3);
+    position: relative;
+    text-align: center;
+    border: solid rgb(48, 47, 47) 5px;
+}
+#showonefromdb {
+    background-color: rgba(192, 255, 213, 0.3);
+    position: relative;
+    text-align: center;
+    border: solid rgb(48, 47, 47) 5px;
+}
+
+.infos {
+    position: absolute;
+    color: rgb(197, 126, 34);
+    left: 30%;
+}
+
+.field {
+    width: 300px;
+    position: absolute;
+    right: 30%;
+}
+
+.show {
+    color: rgb(197, 126, 34);
+    font-size: 18px;
+    
+}
+
+.td-1 {
+    text-align: left;
+    border: solid rgb(197, 126, 34) 2px;
+    width: 80px;
+}
+.td-2 {
+    text-align: left;
+    border: solid rgb(197, 126, 34) 2px;
+    width: 350px;
+}
+.td-3 {
+    text-align: left;
+    border: solid rgb(197, 126, 34) 2px;
+    width: 150px;
+}
+
+button {
+    position: relative;
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 18px;
+    outline-color: rgb(197, 126, 34);
+    text-align: center;
+    width: 300px;
+}
