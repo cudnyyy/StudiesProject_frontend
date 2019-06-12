@@ -1,31 +1,35 @@
-
 <div id="container">
 
-  <div id="title"><h1>Welcome to {{ title }}!</h1></div>
+  <div id="title">
+    <h1>Welcome to {{ title }}!</h1>
+  </div>
 
   <div id="addtodb">
-      <br />
-      <span class="infos">Fixed part's name: </span>  <input type="text" name="fix-name" class="field"> <br /><br />
-      <span class="infos">Fixing date: </span>        <input type="date" name="fix-date" class="field"> <br /><br />
-      <span class="infos">Price: </span>              <input type="number" name="fix-price" class="field"> <br /><br />
-      <br /><br />
-      <button (click)="addFix()">Add to data base</button> <br /><br />
+    <br />
+    <span class="infos">Fixed part's name: </span> <input type="text" name="fix_name" [(ngModel)]="fix_name" class="field"> <br /><br />
+    <span class="infos">Fixing date: </span> <input type="date" name="fix_date" [(ngModel)]="fix_date" class="field"> <br /><br />
+    <span class="infos">Price: </span> <input type="number" name="fix_price" [(ngModel)]="fix_price" class="field"> <br /><br />
+    <br /><br />
+    <button (click)="addFix(fix_name, fix_date, fix_price)">Add to data base</button> <br /><br />
   </div>
 
   <div id="deletefromdb">
     <br />
-    <span class="infos">ID: </span>                   <input type="number" name="rm-id" class="field"> <br /><br />
+    <span class="infos">ID: </span> <input type="number" name="rm_id" [(ngModel)]="rm_id" class="field"> <br /><br />
     <br /><br />
-    <button (click)="rmFix(rm-id)">Remove from data base by ID</button> <br /><br />
+    <button (click)="rmFix(rm_id)">Remove from data base by ID</button> <br /><br />
   </div>
 
   <div id="showdb">
     <br />
     <button (click)="getFixes()">Show data base</button> <br /><br />
-    <div class="show" *ngFor="let myFix of myFixes">
+    <div class="show" *ngFor="let myfix of myFixes">
       <table style="margin-left: auto; margin-right: auto;">
         <tr>
-          <td class="td-1">{{myFix.id}}</td> <td class="td-2">{{myFix.thing}}</td> <td class="td-3">{{myFix.stringDate}}</td > <td class="td-1">{{myFix.price}}</td>
+          <td class="td-1">{{myfix.id}}</td>
+          <td class="td-2">{{myfix.thing}}</td>
+          <td class="td-3">{{myfix.stringDate}}</td>
+          <td class="td-1">{{myfix.price}} pln</td>
         </tr>
       </table>
     </div>
@@ -33,19 +37,22 @@
 
   <div id="showonefromdb">
     <br />
-    <span class="infos">ID: </span>                   <input type="number" name="get-id" class="field"> <br /><br />
+    <span class="infos">ID: </span> <input type="number" name="add_id" [(ngModel)]="add_id" class="field"> <br /><br />
     <br /><br />
-    <button (click)="getFix(get-id)">Show one verse from data base by ID</button> <br /><br />
-    <!-- <div class="show">
-        <table style="margin-left: auto; margin-right: auto;">
-          <tr>
-            <td class="td-1">{{myFix.id}}</td> <td class="td-2">{{myFix.thing}}</td> <td class="td-3">{{myFix.stringDate}}</td > <td class="td-1">{{myFix.price}}</td>
-          </tr>
-        </table>
-      </div> -->
+    <button (click)="getFix(add_id)">Show one verse from data base by ID</button> <br /><br />
+    <div id="ashow" class="show" style="display: none" >
+      <table style="margin-left: auto; margin-right: auto;">
+        <tr>
+          <td class="td-1">{{myFix.id}}</td>
+          <td class="td-2">{{myFix.thing}}</td>
+          <td class="td-3">{{myFix.stringDate}}</td>
+          <td class="td-1">{{myFix.price}}</td>
+        </tr>
+      </table>
+    </div>
   </div>
-  
-  
+
+
 </div>
 
 <!--<router-outlet></router-outlet>-->

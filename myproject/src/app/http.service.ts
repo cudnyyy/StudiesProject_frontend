@@ -14,8 +14,8 @@ export class HttpService {
     }
 
     /** downlad one by id */
-    getFix(id: number): Observable<Fix> {
-        return this.http.get<Fix>('http://localhost:8080/api/fixes/' + id);
+    getFix(add_id: number): Observable<Fix> {
+        return this.http.get<Fix>('http://localhost:8080/api/fixes/' + add_id);
     }
 
     /** delete one by id */
@@ -24,8 +24,8 @@ export class HttpService {
     }
 
     /** add verse */
-    rmFix(id: number) {
-        
+    rmFix(rm_id: number) {
+        return this.http.delete<Fix>('http://localhost:8080/api/fixes/' + rm_id);
     }
 
 }
