@@ -18,12 +18,12 @@ export class HttpService {
         return this.http.get<Fix>('http://localhost:8080/api/fixes/' + add_id);
     }
 
-    /** delete one by id */
+    /** add verse */
     addFix(fix: Fix): Observable<Fix> {
         return this.http.post<Fix>('http://localhost:8080/api/fixes', fix);
     }
 
-    /** add verse */
+    /** delete one by id */
     rmFix(rm_id: number) {
         return this.http.delete<Fix>('http://localhost:8080/api/fixes/' + rm_id);
     }

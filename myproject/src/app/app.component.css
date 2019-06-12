@@ -6,32 +6,53 @@
     min-width: 1200px;
 }
 
+#footer {
+    background-color: rgba(128, 128, 128, 0.300);
+    min-height: 100px;
+    bottom: 0;
+    border-left: solid rgb(48, 47, 47) 5px;
+    border-right: solid rgb(48, 47, 47) 5px;
+}
+
 #title {
     color: rgb(197, 126, 34);
     font-size: 18px;
     text-align: center;
+    font-family: monospace;
 }
 
-#addtodb {
-    background-color: rgba(128, 128, 128, 0.300);
-    position: relative;
-    text-align: center;
-    border: solid rgb(48, 47, 47) 5px;
-}
 #deletefromdb {
-    background-color: rgba(255, 192, 203, 0.300);
+    background-color: rgba(255, 192, 203, 0.144);
     position: relative;
     text-align: center;
     border: solid rgb(48, 47, 47) 5px;
 }
-#showdb {
-    background-color: rgba(192, 193, 255, 0.3);
+
+.block-moto {
     position: relative;
-    text-align: center;
-    border: solid rgb(48, 47, 47) 5px;
+    height: 320px;
+    width: 400px;
+    margin-left: auto; 
+    margin-right: auto;
 }
-#showonefromdb {
-    background-color: rgba(192, 255, 213, 0.3);
+
+.block {
+    position: relative;
+    background-color: rgba(128, 128, 128, 0.300);
+    text-align: center;
+    min-height: 320px;
+    min-width: 800;
+    border: solid rgb(48, 47, 47) 5px;
+    margin-left: 0; 
+    margin-right: auto;
+}
+
+.clearboth {
+    clear: both;
+}
+
+.block_2 {
+    background-color: rgba(128, 128, 128, 0.300);
     position: relative;
     text-align: center;
     border: solid rgb(48, 47, 47) 5px;
@@ -41,6 +62,7 @@
     position: absolute;
     color: rgb(197, 126, 34);
     left: 30%;
+    font-family: monospace;
 }
 
 .field {
@@ -52,7 +74,7 @@
 .show {
     color: rgb(197, 126, 34);
     font-size: 18px;
-    
+    font-family: monospace;
 }
 
 .td-1 {
@@ -70,13 +92,21 @@
     border: solid rgb(197, 126, 34) 2px;
     width: 150px;
 }
+.footer-font {
+    margin-left: 40px;
+    color: rgb(197, 126, 34);
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+}
 
 button {
     position: relative;
     padding: 10px;
     font-size: 12px;
-    border-radius: 18px;
+    border-radius: 8px;
     outline-color: rgb(197, 126, 34);
     text-align: center;
+    margin-left: auto;
+    margin-right: auto; 
     width: 300px;
 }

@@ -11,7 +11,7 @@ export class AppComponent {
 
   constructor(private httpService: HttpService) { }
 
-  title = 'myproject';
+  moto = 'Suzuki GS-500';
 
   myFixes: Fix[];
   getFixes() {

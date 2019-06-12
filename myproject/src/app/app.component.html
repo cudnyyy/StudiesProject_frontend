@@ -1,17 +1,26 @@
 <div id="container">
 
-  <div id="title">
-    <h1>Welcome to {{ title }}!</h1>
+  <div class="block-moto">
+    <img style="width: 400px; height: 300px;" src="assets/img/V6W6cPULzfUgde9pEh92qLhnA.png">
   </div>
 
-  <div id="addtodb">
+  <div id="title">
+    <h1>Elektroniczna książka serwisowa motocykla {{moto}}:</h1>
+  </div>
+
+  <div class="block">
     <br />
-    <span class="infos">Fixed part's name: </span> <input type="text" name="fix_name" [(ngModel)]="fix_name" class="field"> <br /><br />
-    <span class="infos">Fixing date: </span> <input type="date" name="fix_date" [(ngModel)]="fix_date" class="field"> <br /><br />
-    <span class="infos">Price: </span> <input type="number" name="fix_price" [(ngModel)]="fix_price" class="field"> <br /><br />
+    <span class="infos">Fixed part's name: </span> <input type="text" name="fix_name" [(ngModel)]="fix_name"
+      class="field"> <br /><br />
+    <span class="infos">Fixing date: </span> <input type="date" name="fix_date" [(ngModel)]="fix_date" class="field">
+    <br /><br />
+    <span class="infos">Price: </span> <input type="number" name="fix_price" [(ngModel)]="fix_price" class="field">
+    <br /><br />
     <br /><br />
     <button (click)="addFix(fix_name, fix_date, fix_price)">Add to data base</button> <br /><br />
   </div>
+
+  <br />
 
   <div id="deletefromdb">
     <br />
@@ -20,7 +29,9 @@
     <button (click)="rmFix(rm_id)">Remove from data base by ID</button> <br /><br />
   </div>
 
-  <div id="showdb">
+  <br />
+
+  <div class="block_2">
     <br />
     <button (click)="getFixes()">Show data base</button> <br /><br />
     <div class="show" *ngFor="let myfix of myFixes">
@@ -35,12 +46,14 @@
     </div>
   </div>
 
-  <div id="showonefromdb">
+  <br />
+
+  <div class="block_2">
     <br />
     <span class="infos">ID: </span> <input type="number" name="add_id" [(ngModel)]="add_id" class="field"> <br /><br />
     <br /><br />
     <button (click)="getFix(add_id)">Show one verse from data base by ID</button> <br /><br />
-    <div id="ashow" class="show" style="display: none" >
+    <div id="ashow" class="show" style="display: none">
       <table style="margin-left: auto; margin-right: auto;">
         <tr>
           <td class="td-1">{{myFix.id}}</td>
@@ -52,6 +65,12 @@
     </div>
   </div>
 
+  <br /><br />
+
+  <div id="footer">
+    <br />
+    <span class="footer-font">Author: Krystian Cudak</span>
+  </div>
 
 </div>
 
